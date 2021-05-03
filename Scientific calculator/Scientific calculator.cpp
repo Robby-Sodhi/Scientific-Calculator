@@ -126,7 +126,7 @@ double evaluteExpression(string expression) {
 int main() {
 
     string expression;
-    cout << "enter expression(infix): ";
+    cout << "enter expression(infix)(no variables): ";
     getline(cin, expression);
 
     cout << "result: " << evaluteExpression(expression) << endl;
