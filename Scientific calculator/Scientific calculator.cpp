@@ -51,13 +51,13 @@ vector<string> infixToPostfix(string input) {
     for (int i{ 0 }; i < input.size(); i++) {
         if (isOperand(input[i])) {
             string digit = string(1, input[i]);
-            i++;
+            ++i;
             while (isOperand(input[i])) {
                 digit += input[i];
                 ++i;
             }
             output.push_back(digit);
-            i--;
+            --i;
         }
         else if (input[i] == '(') {
             opstack.push(input[i]);
