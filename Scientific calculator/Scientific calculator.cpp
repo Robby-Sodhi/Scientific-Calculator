@@ -1,8 +1,7 @@
 #include <iostream>
 #include <stack>
 #include <string>
-#include <vector>
-#include <sstream>
+
 
 using namespace std;
 
@@ -94,6 +93,7 @@ double performMathOperation(char opp, double first, double second) {
 }
 double evaluteExpression(string expression) {
     string postfix = infixToPostfix(expression);
+    cout << postfix << endl;
 
     stack<double> opperands;
     for (int i = 0; i < postfix.size(); i++) {
@@ -109,13 +109,13 @@ double evaluteExpression(string expression) {
             opperands.push(result);
         }
     }
-    return opperands.top();
+   return opperands.top();
 }
 
 int main() {
 	string expression;
 	cout << "enter expression(infix)(single digit numbers only): ";
-	cin >> expression;
+    getline(cin, expression);
 
 	cout << "result: " << evaluteExpression(expression) << endl;
 
