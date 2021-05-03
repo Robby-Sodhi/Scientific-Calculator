@@ -127,6 +127,7 @@ int main() {
     cout << "good example expressions: " << endl;
     cout << "(128 * (85 * 26 - 11) / 19) = 14814.3" << endl;
     cout << "10*150/1000+50 = 51.5" << endl;
+    cout << "18238*231895*21941/100000000 = 927951" << endl;
     cout << "enter expression(infix)(no variables): ";
     getline(cin, expression);
 
