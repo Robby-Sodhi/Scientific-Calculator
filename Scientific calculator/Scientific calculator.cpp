@@ -88,12 +88,13 @@ vector<string> infixToPostfix(string input) {
 double performMathOperation(string opp, double first, double second) {
     if (opp.compare("+") == 0)
         return first + second;
-    if (opp.compare("-") == 0)
+    else if (opp.compare("-") == 0)
         return first - second;
-    if (opp.compare("*") == 0)
+    else if (opp.compare("*") == 0)
         return first * second;
-    if (opp.compare("/") == 0)
+    else if (opp.compare("/") == 0)
         return first / second;
+    cout << "invalid symbol" << endl; //add error handling
 
 }
 double evaluteExpression(string expression) {
