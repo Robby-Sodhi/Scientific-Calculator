@@ -3,7 +3,6 @@
 #include <string>
 #include <vector>
 
-
 using namespace std;
 
 bool isOperator(char input)
@@ -94,7 +93,8 @@ double performMathOperation(string opp, double first, double second) {
         return first * second;
     else if (opp.compare("/") == 0)
         return first / second;
-    cout << "invalid symbol" << endl; //add error handling
+    else if (opp.compare("^") == 0)
+        return pow(first, second);
 
 }
 double evaluteExpression(string expression) {
